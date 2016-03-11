@@ -1,0 +1,93 @@
+Primer proyecto de Computacion Grafica I - ci4321
+Arkanoid
+
+Julio Castillo - 0234745
+Cesar Romero - 0235409
+
+Este documento tiene como objetivo explicar brevemente las
+instrucciones de compilacion y uso del programa. Tambien se tratara de
+explicar lo mas breve posible como se cumplieron los requerimientos
+del proyecto.
+
+COMPILACION: 
+
+Para que el proceso de compilacion culmine satisfactoriamente es
+necesario tener instaladas las librearias de opengl y SDL. Estas
+ultimas son usadas unicamente para cargar imagenes BMP en memoria que
+seran usadas como texturas con primitivas de opengl.
+
+Para compilar solo hacemos `make' en el directorio raiz del programa:
+
+$ make
+
+
+EJECUCION:
+
+Si el proceso de compilacion se llevo a cabo con exito, podemos
+ejecutar el programa a traves del binario llamado "arkanoid" (sin
+comillas). Lo ejecutamos:
+
+./arkanoid
+
+Una vez ejecutada la aplicacion deberiamos ver la ventana principal
+del juego. Para empezar a jugar solo es necesario hacer "click" con el
+boton izquierdo del mouse (para soltar la bola) y con los movimientos
+del mismo controlamos la ubicacion del "paddle".
+
+En cualquier momento durante la ejecucion del programa podemos
+presionar la tecla 'h' en el teclado para desplegar un mensaje de
+ayuda que indica todas las teclas que permiten interactuar con la
+aplicacion.
+
+
+REQUERIMIENTOS ATENDIDOS:
+
+Iremos enumerandolos al igual que en el enunciado y diciendo como
+fueron atendidos.
+
+1. La ventana del juego muestra la bola, el "paddle", los ladrillos
+que van siendo destruidos y un estado global del juego.
+
+2. En el codigo se aprecia que absolutamente todos los objetos de
+todas las escenas son creados con primitivas de OpenGL
+
+3. En la esquina superior derecha del juego (cerca del estado global)
+veremos una figura articulada constantemente animada. Esta figura no
+aparece en ninguna implementacion previa de este juego que haya sido
+vista por nosotros, solo la hicimos para cumplir con este requerimiento
+
+4. Ver el codigo, similar al punto 2
+
+5. Todos los ladrillos o bloques que deben ser derribados con la bola
+y los premios (extras) que caen periodicamente tienen aplicadas texturas.
+
+6. La bola es de acabado difuso, el "paddle" es de acabado especular.
+
+7. Se aprecia facilmente en los ladrillos o bloques y en los extras que 
+van cayendo.
+
+8. No aplica directamente. En todo caso, el objeto articulado fue
+construido empleando nada mas que primitivas de opengl.
+
+9. Como lo muestra el help, la tecla 'W' o 'w' cumplen este proposito.
+
+10. Se aprecia en la bola y en el paddle. Al hacer uso de primitivas
+como gluCylinder y glutSolidsphere para dibujar estos objetos, y
+glEnable(GL_NORMALIZE) no es necesario hacer el calculo de las
+normales manualmente
+
+11. Similar al punto 3, objeto animado presente en la esquina superior
+derecha.
+
+12. Con las teclas indicadas en el mensaje de ayuda se puede cambiar
+el tipo de ilumacion de la escena en todo momento. En la bola y el
+"paddle" se aprecian con facilidad estos cambios en el tipo de
+iluminacion
+
+13. Ver la funcion display() en main.c
+
+14. Como lo indica el mensaje de ayuda, la letra 'l' disminuye la
+atenuacion de la luz mientras que la letra 'L' la aumenta llegando a
+iluminar o obscurecer por completo la escena. Analogamente la tecla
+'t' o 'T' permite habilitar o deshabilitar todas las texturas de la
+escena.
